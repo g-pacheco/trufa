@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Reprodutibilidade - Introdução à Análise<br>de Dados Genômicos</title>
+    <title>[Protected] Reprodutibilidade - Introdução à Análise<br>de Dados Genômicos</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -84,31 +84,31 @@
                 
                 
                     <li >
-                        <a href="../firststeps/">Primeiros Passos</a>
+                        <a href="../firststeps/">[Protected] Primeiros Passos</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../divingintoit/">Mãos na Massa</a>
+                        <a href="../divingintoit/">[Protected] Mãos na Massa</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="./">Reprodutibilidade</a>
+                        <a href="./">[Protected] Reprodutibilidade</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../furthermaterial/">Material Adicional</a>
+                        <a href="../furthermaterial/">[Protected] Material Adicional</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../participants/">Participantes</a>
+                        <a href="../participants/">[Protected] Participantes</a>
                     </li>
                 
                 
@@ -121,11 +121,6 @@
                 </ul>
 
             <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center;">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Pesquisar
-                        </a>
-                    </li>
             </ul>
         </div>
     </div>
@@ -147,172 +142,32 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="reprodutibilidade">Reprodutibilidade 🔄</h1>
-<h3 id="1-fazer-refazer-desfazer-fazer-novamente-salvar-tudo">1. Fazer. Refazer. Desfazer. Fazer Novamente. SALVAR TUDO! 🚨</h3>
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">No trabalho com dados genômicos sempre rodamos as análise infindáveis vezes com parâmetros diferentes e geramos inúmeras versões dos gráficos apresentados fazendo uso de <i>scripts</i> levemente modificados. Assim, é de suma impotância que tenhamos um ótimo controle dessas diferentes versões. Isso é geralmente conseguido usando-se um bom <a href="https://pt.wikipedia.org/wiki/Sistema_de_controle_de_vers%C3%B5es" target="_blank">Sistema de Controle de Versões</a>, que garante que tenhamos total controle de todas as versões envolvidas. O <a href="https://github.com/" target="_blank">GitHub</a> é a plataforma de hospedagem de códigos e arquivos mais comumente utilizada na área científica, e faz do <a href="https://git-scm.com/" target="_blank">Git</a> — um amplo sistema de controle de versões. Portanto, iremos agora passar por uma breve introdução à rotina de trabalho com o essa importante ferramente de trabalho.</p>
-
-<h4 id="11-criando-uma-conta-no-github">1.1. Criando Uma Conta no <a href="https://github.com/" target="_blank">GitHub</a></h4>
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Caso você ainda não tenha uma conta no <a href="https://github.com/" target="_blank">GitHub</a>, você pode criar uma de forma gratuita <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" target="_blank">aqui</a> usando o caminho que você achar melhor.</p>
-
-<h4 id="12-criando-um-novo-repositorio">1.2. Criando Um Novo Repositório</h4>
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Os códigos armazenados no <a href="https://github.com/" target="_blank">GitHub</a> são hospedados dentro de repositórios destinados a projetos específicos, e esses repositórios podem ser <i>públicos</i> ou <i>privados</i>. Assim, precisamos agora criar um novo repositório, o que pode ser feito <a href="https://github.com/new" target="_blank">aqui</a> segundo esses parâmetros (não é preciso se preocupar com as demais opções):</p>
-
-<ul class="custom-list_3_first">
-  <li><code style="color: #b84e39 !important; background-color: transparent; padding: 0; font-weight: bold; margin-right: 18px;">Repository Name</code>Escolha um nome que faça sentido não somente para você, mas também para outras pessoas que venham a visitar o seu repositório.</li>
-</ul>
-
-<ul class="custom-list_3">
-  <li><code style="color: #b84e39 !important; background-color: transparent; padding: 0; font-weight: bold; margin-right: 18px;">Description</code>Adicione uma pequena descrição do seu repositório. Mais uma vez, lembre-se que é bom ter uma descrição que seja de fácil entendimento por parte de possíveis visitantes.</li>
-</ul>
-
-<h4 id="13-gerando-uma-chave-ssh-publica-no-npadufrn">1.3. Gerando uma chave SSH pública no <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a></h4>
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Você agora pode conectar a sua conta no <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a> ao seu <a href="https://github.com/" target="_blank">GitHub</a> também através de uma <a href="https://pt.wikipedia.org/wiki/RSA_(sistema_criptogr%C3%A1fico)" target="_blank">Chave Pública tipo RSA</a>. Para isso, primeiro crie uma chave na sua conta no <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a> usando o comando abaixo. Você deverá digitar uma senha para a sua chave, apertar <b>Enter</b> e depois repetir a mesma senha e apertar <b>Enter</b> outra vez. Isso feito, a sua chave terá sido criada. ⚠️ <b>Atenção! É importante que você se lembre da sua senha depois — guarde-a com sabedoria!</b></p>
-</p>
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-22" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">ssh-keygen -t ed25519 -C "COLOQUE-AQUI-O-EMAIL-CADASTRADO-NO-GITHUB" -f ~/.ssh/MyNPAD-MyGitHub</code></pre>
-  <button id="copy-btn-22" onclick="copyToClipboard('ssh-path-22', 'copy-btn-22')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
+<div id="mkdocs-encrypted-content" style="display:none">F318hxzm8uYq2h/rGagA4w==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
 
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Abra a chave criada com o comando abaixo e copie todo o seu contúdo:</p>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "workshopgenomics/reproducibility/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["AqGy1dFdav1KvAvwEmEs/w==;iRsOhm3dcVYIp8qJ1OAE9eRx66P6wGk5X31PVKhNzq70rYp2hFW9QdD7YYHzXFAcSVUSuvMTA0vt0o4xknXCq+9oAdrCl3u0IKWd4a8vNuA1y3YKXQkQAf3VF1ABQjrL;4jnVSjzEcpoN6dZMIhEB3w=="];
+var encryptcontent_obfuscate = 0;
 
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-23" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">cat ~/.ssh/MyNPAD-MyGitHub.pub</code></pre>
-  <button id="copy-btn-23" onclick="copyToClipboard('ssh-path-23', 'copy-btn-23')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Você deve registrar o a chave criada <a href="https://github.com/settings/ssh/new" target="_blank">aqui</a> usando os seguintes parâmetros:</p>
-
-<ul class="custom-list_3_first">
-  <li><code style="color: #b84e39 !important; background-color: transparent; padding: 0; font-weight: bold; margin-right: 18px;">Title</code>Escolha um nome que faça sentido para você e que possa ser fácil de você lembrar no futuro.</li>
-</ul>
-
-<ul class="custom-list_3_last">
-  <li><code style="color: #b84e39 !important; background-color: transparent; padding: 0; font-weight: bold; margin-right: 18px;">Key</code>Cole aqui todo o conteúdo da chave criada.</li>
-</ul>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Por fim, você pode fazer com que o <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a> sempre use essa chave. Para isso, abra o ficheiro <b>~/.ssh/config</b> com o programa <a href="https://pt.wikipedia.org/wiki/GNU_nano" target="_blank">nano</a> com o seguinte comando:</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-24" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">nano ~/.ssh/config</code></pre>
-  <button id="copy-btn-24" onclick="copyToClipboard('ssh-path-24', 'copy-btn-24')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">E nele cole as linhas abaixo (lembre-se que para sair do nano você deve fazer <b>control + o</b>, apertar <b>Enter</b> e então <b>control + x</b>):</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-25" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">Host github.com
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/MyNPAD-MyGitHub</code></pre>
-  <button id="copy-btn-25" onclick="copyToClipboard('ssh-path-25', 'copy-btn-25')" style="position: absolute; top: 50%; transform: translateY(-50%); right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<h4 id="14-npadufrn-github-uma-conexao-necessaria">1.4. <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a> &lt;-&gt; <a href="https://github.com/" target="_blank">GitHub</a> — Uma Conexão Necessária</h4>
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Só resta a você configurar a sua conta no <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a> de forma tal que ela sempre use a sua conta no <i>GitHub</i>. Isso pode ser feito com o comando abaixo fazendo uso.</p>
-
-<div style="position: relative; margin: 20px 0px;">
-    <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-26" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">git config --global user.name GITHUB-USERNAME; git config --global user.email EMAIL-CADASTRADO-NO-GITHUB</code></pre>
-  <button id="copy-btn-26" onclick="copyToClipboard('ssh-path-26', 'copy-btn-26')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Pronto! Agora você tem repositório criado e tudo configurado no <a href="https://npad.ufrn.br/" target="_blank">NPAD/UFRN</a>. Assim, agora você pode conectar esse repositório ao diretório <b>SBBE26_PopGen</b> criado no passo anterior. Para isso, vamos primeiro voltar ao diretório <b>SBBE26_PopGen</b> e depois iniciar essa conexão com o comando abaixo:</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-27" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">cd ..; git init -b main</code></pre>
-  <button id="copy-btn-27" onclick="copyToClipboard('ssh-path-27', 'copy-btn-27')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Daí você pode fazer a conexão de fato adicionando ao comando abaixo o seu <b>nome de usuário no GitHub</b> e o <b>nome do repositório</b> em questão:</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-28" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">git remote add origin git@github.com:SEU-USERNAME-NO-GITHUB/NOME-DO-SEU-REPOSITÓRIO.git</code></pre>
-  <button id="copy-btn-28" onclick="copyToClipboard('ssh-path-28', 'copy-btn-28')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Você pode criar o seu primeiro ficheiro dentro do seu repositório. Vamos aproveitar essa oportunidade para criar um arquivo especial dentro do sistema do <i>GitHub</i> — o ficheiro <b>README.md</b>. Crie-o com o <b>nano</b> e coloque nele o conteúdo abaixo Lembre-se que você deve apertar <b>control + o</b> seguido do <b>Enter</b> para salvar, e depois <b>control + x</b> para sair do programa <b>nano</b>.</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-29" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">## Dummy Repository for the [SBBE26 Introduction to Genomic Analyses Workshop](https://sbbe-oficial.github.io/workshopgenomics/)
-
-> Documentation outlining the pipeline's workflow.  
-***
-
-### Data Processing 
-
-The dataset [ipsimdata.tar.gz](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/ipsimdata.tar.gz) was processed with [Ipyrad](https://ipyrad.readthedocs.io/en/master/) using the parameters in [params-tutorial.txt](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/params-tutorial.txt).
-
-### Population Structure  
-
-#### Principal Component Analysis
-
-This analysis was performed with the software [Plink](https://www.cog-genomics.org/plink/) as described in [RunsPCA.sh](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/SBBE26_PopGen/PCA/RunsPCA.sh). The results were ploted using R script [PlotsPCA.R](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/SBBE26_PopGen/PCA/PlotsPCA.R).
-
-- [PCA_Plot.pdf](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/SBBE26_PopGen/PCA/PCA_Plot.pdf)
-
-#### Estimation of Individual Ancestries
-
-This analysis was performed with the software [Admixture](https://dalexander.github.io/admixture/) as described in [RunsAdmixture.sh](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/SBBE26_PopGen/Admixture/RunsAdmixture.sh).
-
-- [Admixture_Plot.pdf](https://github.com/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-USUÁRIO-GITHUB</span>/<span style="color: #b84e39; font-weight: bold;">COLOQUE-AQUI-O-SEU-REPOSITÓRIO-GITHUB</span>/blob/main/SBBE26_PopGen/Admixture/Admixture_Plot.pdf)</code></pre>
-  <button id="copy-btn-29" onclick="copyToClipboard('ssh-path-29', 'copy-btn-29')" style="position: absolute; top: 42.5%; transform: translateY(-50%); right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Tendo adicionado o primeiro ficheiro, agora você pode submeter ao <i>GitHub</i> as mudança feita localmente no nosso repositório. Primeiro, temos que adicionar as mudanças:</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-30" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">git add .</code></pre>
-  <button id="copy-btn-30" onclick="copyToClipboard('ssh-path-30', 'copy-btn-30')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Então você pode adicionar uma nota (<i>commit</i>) a ser vinculada à mudança em questão:</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-31" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">git commit -m "<span style="color: #b84e39;">COLOQUE-AQUI-UM-COMENTÁRIO-QUE-FAÇA-SENTIDO</span>"</code></pre>
-  <button id="copy-btn-31" onclick="copyToClipboard('ssh-path-31', 'copy-btn-31')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;">Finalmente, você pode enviar ao seu repositório as mudanças e no mesmo segundo o seu repositório será atualizado no <i>GitHub</i>!</p>
-
-<div style="position: relative; margin: 20px 0px;">
-  <pre style="background-color: #fcfdff; color: #fcfdff; padding: 12px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; margin: 0; border: 1px solid #eaa973;"><code id="ssh-path-32" style="color: #000000; background-color: transparent; padding: 0; font-weight: bold;">git push -u origin main</code></pre>
-  <button id="copy-btn-32" onclick="copyToClipboard('ssh-path-32', 'copy-btn-32')" style="position: absolute; top: 8px; right: 8px; background-color: #b84e39; color: white; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; font-family: system-ui, sans-serif; transition: all 0.2s;">📋 Copiar</button>
-</div>
-
-<p style="text-align: justify; text-indent: 35px; margin: 0 0 0 0;"></p>
-
-<script>
-function copyToClipboard(codeId, buttonId) {
-  const codeElement = document.getElementById(codeId);
-  const textToCopy = codeElement.innerText;
-  const button = document.getElementById(buttonId);
-
-  navigator.clipboard.writeText(textToCopy).then(() => {
-    const originalText = button.innerHTML;
-    const originalColor = button.style.backgroundColor;
-
-    button.innerHTML = '✅ Copiado!';
-    button.style.backgroundColor = '#eaa973';
-
-    setTimeout(() => {
-      button.innerHTML = originalText;
-      button.style.backgroundColor = originalColor;
-    }, 2000);
-  }).catch(() => {
-    const textarea = document.createElement('textarea');
-    textarea.value = textToCopy;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-
-    button.innerHTML = '✅ Copiado!';
-    button.style.backgroundColor = '#eaa973';
-
-    setTimeout(() => {
-      button.innerHTML = '📋 Copiar';
-      button.style.backgroundColor = '#b84e39';
-    }, 2000);
-  });
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
 }
 </script></div>
         
@@ -350,34 +205,8 @@ function copyToClipboard(codeId, buttonId) {
     
     <script src="../js/base.js"></script>
     <script src="../js/extra.js"></script>
-    <script src="../search/main.js"></script>
 
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="searchModalLabel">Pesquisar</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Por favor, digite abaixo o termo a ser pesquisado.
-                </p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Pesquisar..." id="mkdocs-search-query" title="Digite o termo de busca aqui">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

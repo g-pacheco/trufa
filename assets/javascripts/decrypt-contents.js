@@ -296,7 +296,10 @@ async function decryptor_reaction(key_or_keys, password_input, decrypted_content
         
         
         
-        
+        let reload_scripts = ['#copy-buttons'];
+        for (let i = 0; i < reload_scripts.length; i++) { 
+            await reload_js(reload_scripts[i]);
+        }
         if (typeof theme_run_after_decryption !== 'undefined') {
             theme_run_after_decryption();
         }
